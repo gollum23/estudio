@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python y Django</title>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/defaul.css" id="theme">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/desert.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="prettyPrint()">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Python y Django</h1>
+                <p>Programar no solo es divertido, tambien es fácil</p>
+                <p>Introducción a Python y django</p>
+                <div class="logo">
+                    <img src="images/python-logo-generic.svg" width="300">    
+                </div>
+                <div class="logo">
+                    <img src="images/django-logo-positive.svg" width="300">
+                </div>
+            </section>
+
+            <section>
+                <h2>Filosofia de Python</h2>
+                <p class="filosofia">Bello es mejor que feo.</p>
+                <p class="filosofia">Explícito es mejor que implícito.</p>
+                <p class="filosofia">Simple es mejor que complejo.</p>
+                <p class="filosofia">Complejo es mejor que complicado.</p>
+                <p class="filosofia">Plano es mejor que anidado.</p>
+                <p class="filosofia">Disperso es mejor que denso.</p>
+                <p class="filosofia">La legibilidad cuenta.</p>
+                <p class="filosofia">Los casos especiales no son tan especiales como para quebrantar las reglas.</p>
+                <p class="filosofia">Aunque lo práctico gana a la pureza.</p>
+                <p class="filosofia">Los errores nunca deberían dejarse pasar silenciosamente.</p>
+                <p class="filosofia">A menos que hayan sido silenciados explícitamente.</p>
+                <p class="filosofia">Frente a la ambigüedad, rechaza la tentación de adivinar.</p>
+                <p class="filosofia">Debería haber una -y preferiblemente sólo una- manera obvia de hacerlo.</p>
+                <p class="filosofia">Aunque esa manera puede no ser obvia al principio a menos que usted sea holandés.</p>
+                <p class="filosofia">Ahora es mejor que nunca.</p>
+                <p class="filosofia">Aunque nunca es a menudo mejor que ya mismo.</p>
+                <p class="filosofia">Si la implementación es difícil de explicar, es una mala idea.</p>
+                <p class="filosofia">Si la implementación es fácil de explicar, puede que sea una buena idea.</p>
+                <p class="filosofia">Los espacios de nombres (namespaces) son una gran idea ¡Hagamos más de esas cosas!</p>
+            </section>
+            <section>
+                <section>
+                    <h2>¿Qué es Python?</h2>
+                    <p>Python es un lenguaje de programación similar a Perl, pero con una sintaxis muy limpia y ayuda a un código legible.</p>
+                    <p>Es un lenguaje de interpretado o de script, con tipado dinámico, fuertemente tipado, multiplataforma y <strong>orientado a objetos</strong></p>    
+                </section>
+                <section>
+                    <h3>Lenguaje interpretado o de script</h3>
+                    <p>Un lenguaje interpretado o de script es aque que se ejecuta utilizando in programa intermedio llamado intérprete, en liugar de compilar el código a lenguaje máquina que pueda ejecutar directamente una computadora</p>
+                    <p>Los lenguajes compilados son más rapidos en si ejecución, pero los lenguajes interpretados sn más flexibles y portables</p>
+                    <p>Python sin embargo cuenta con las características de los lenguajes compilados ya que el codigo fuente se traduce a un pseudo código máquina llamado bytecode en su primera ejecución, generando archivos con extención  .pyc o .pyo (bytecode optimizado)</p>
+                </section>
+                <section>
+                    <h3>Tipado dinámico</h3>
+                    <p>El tipado dinámico se refiere a que no es necesario declarar el tipo de dato que va a ser almacenada en una variable, y puede cambiar de tipo de dato según el tipo del valor que se asigne</p>
+                    <h3>Fuertemente tipado</h3>
+                    <p>No se permite tratar a una variable como si fuera de un tipo distinto al que tiene</p>
+                    <p>Si tenemos una variable de tipo string no podemos concatenarla con una variable de tipo numero</p>
+                </section>
+                <section>
+                    <h3>Multiplataforma</h3>
+                    <p>El intérprete de Python está disponible para la mayoria de plataformas (UNIX, Solaris, Linux, DOS, Windows, OS/2, Mac Os) por lo que si no se utilizan librerias especificas de cada plataforma el programá podrá correr en todos los sistemas sin hacer mayores modificaciones</p>
+                    <h3>Orientado a Objetos</h3>
+                    <p>La orientación a objetos es un paradigma de programación en el que los conceptos del mundo real relevantes para solucionar nuestro problema se trasladan a clases y objetos</p>
+                    <p>Python también permite la programación imperativa, funciona y orientada a aspectos</p>
+                </section>
+                <section>
+                    <h3>¿Por qué Python?</h3>
+                    <p>Su sintaxis simple, clara y sencilla.</p>
+                    <p>Tipado dinámico, gestor de memoria.</p>
+                    <p>Gran cantidad de librerías disponibles y la <strong>potencia del lenguaje</strong>, hacen que desarrollar en Python sea sencillo, rápido y sobretodo divertido.</p>
+                    <p>La sintaxis es tan sencilla y parecida al lenguaje natural que los programas elaborados en Python parecen pseudocódigo. Por este motivo es uno de los mejores lenguajes para aprender a programar.</p>
+                </section>
+                <section>
+                    <h3>Instalación de Python</h3>
+                    <p>Python viene instalado por defecto en la mayoria de distribuciones de Linux y Mac Os.</p>
+                    <p>Para windows existe el instalador oficial o un instalador creado por ActivaState (Creador del IDE Komodo)  que nos instala adicionalmente pip. PIP es el gestor de paquetes de python el cual es de gran ayuda para instalar paquetes que nos ayudan a extender el poder de python y django.</p>
+                    <p>Descargar ActivePython -> <a href="http://www.activestate.com/activepython/downloads">http://www.activestate.com/activepython/downloads</a></p>
+                    <p></p>
+                </section>
+                <section>
+                    <h3>Herramientas básicas</h3>
+                    <p>Existen dos formas de ejecutar python, escribiendo el codigo directamente en el interprete o escribiendo el codigo en un archivo plano con terminación .py</p>
+                    <p>Para utilizar el interprete existe una consola interactiva mejorada llamada <strong>iPython</strong>, su instalación es tan sencilla como escribir en la consola de windows o terminal de linux(sudo)</p>
+                    <pre class="prettyprint">pip install ipython</pre>
+                    <p>Entre las mejoras de esta consola encontramos el caracter <strong>?</strong> que nos muestra la ayuda del objeto</p>
+                    <pre class="prettyprint">str?</pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Iniciando con Python</h3>    
+                    <h4>Mi primer programa</h4>
+                    <p>Para nuestro primer programa en Python haremos el tipico Hola Mundo y es tan sencillo como abrir nuestra terminal y digitar</p>
+                    <pre class="prettyprint">   ipython</pre>
+                    <p>si tenemos ipython instalado o</p>
+                    <pre class="prettyprint">   python</pre>
+                    <p>en caso contrario.</p>
+                    <p>Ahora escribimos los siguiente en la termina</p>
+                    <pre class="prettyprint">   print "Hola mundo"</pre>
+                    <p>y en la consola veremos que nos responde</p>
+                    <pre class="prettyprint">   Hola mundo</pre>
+                    <p>Ya tenemos nuestro primer programa.</p>
+                </section>
+                <section>
+                    <h3>Mi primer programa</h3>
+                    <p>Ya utilizamos la consola para nuestro primer programa, ahora vamos ha hacerlo creando un archivo de texto plano con terminación .py</p>
+                    <p>Lo primero es abrir nuestro editor de texto o IDE preferido y escribimos</p>
+                    <pre class="prettyprint">   print "Hola mundo"</pre>
+                    <p>Guardamos como ya se dijo con extensión <strong>.py</strong> y ejecutamos desde la terminal</p>
+                    <pre class="prettyprint">   python nombredearchivo.py</pre>
+                    <p>y veremos que el resultado es igual a si lo hubieramos hecho desde la terminal.</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Tipos de datos básicos</h3>
+                    <p>En python encontramos 3 tipos de datos basicos</p>
+                    <ul>
+                        <li>Números (Enteros, Coma Flotante y Complejos)</li>
+                        <li>Cadenas de texto (Strings)</li>
+                        <li>Booleanos (True y False)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Operadores Numéricos</h3>
+                    <table>
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <td>Operador</td>
+                                    <td>Descripción</td>
+                                    <td>Ejemplo</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>+</td>
+                                <td>Suma</td>
+                                <td>r = 3 + 2 # r es 5</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Resta</td>
+                                <td>r = 4 - 7 # r es -3</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Negación</td>
+                                <td>r = -7 # r es -7</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Multiplicación</td>
+                                <td>r = 2 * 6 # r es 12</td>
+                            </tr>
+                            <tr>
+                                <td>**</td>
+                                <td>Exponente</td>
+                                <td>r = 2 ** 6 # r es 64</td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>División</td>
+                                <td>r = 3.5 / 2 # r es 1.75</td>
+                            </tr>
+                            <tr>
+                                <td>//</td>
+                                <td>División entera</td>
+                                <td>r = 3.5 // 2 # r es 1.0</td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Modulo</td>
+                                <td>r = 7 % 2 # r es 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Consideraciones</h3>
+                    <p>Es importante tener en cuenta que si usamos dos numero enteros en la división (/) python entendera que queremos que el resultado sea un entero por consiguiente 3 / 2 = 1, si queremos que de un resultado decimal tenemos que hacer 3.0 / 2 o hacer un casteo de datos asi</p>
+                    <pre class="prettyprint">   r = float(3) / 2</pre>
+                    <p>Esto es así porque cuando se mezclan tipos de números, Python convierte todos los operandos al tipo más complejo en entre los tipos de los operandos</p>
+                </section>
+                <section>
+                    <h3>Cadenas</h3>
+                    <p>Las cadenas de texto no es nada diferente que texto encerrado entre comillas simples o dobles, dentro de las comillas se pueden utilizar caracteres especiales escapandolso con <strong>\</strong>, como <strong>\n</strong> carácter de nueva línea</p>
+                    <p>Una cadena puede estar precedida por el carácter <strong>u</strong> o <strong>r</strong>, los cuales indican que se trata de una cadena con codificación Unicode o una cadena raw(cruda) respectivamente. Las cadenas raw se distingen de las normales en que los caracteres especiales escapados con <strong>\</strong> no se sustituye por sus contrapartidas, esto es útil para expreciones regulares (Lo veremos en django)</p>
+                    <p>Las cadenas entre comillas triples """cadena""" o '''cadena''' permiten escribir el texto en multiples lineas</p>
+                   
+                </section>
+                <section>
+                    <h3>Cadenas</h3>
+                     <p>El operador <strong>+</strong> funciona para concatenar de las cadenas.</p>
+                     <pre class="prettyprint">
+                         a = "uno"
+                         b = "dos"
+                         c = a + b
+                         #c es "unodos"
+                     </pre>
+                    <p>El operador <strong>*</strong> repite la cadena el numero de veces que indique el número utilizado como segundo operando.</p>
+                    <pre class="prettyprint">
+                        a = "uno"
+                        c = a * 3
+                        #c es "unounouno"
+                    </pre>
+                </section>
+                <section>
+                    <h3>Booleanos</h3>
+                    <p>Los valores que puede tener una variable de tipo booleana sólo son <strong>True</strong> (cierto) o <strong>False</strong> (falso), son utilizadas para expreciones condicionales y bucles</p>
+                    <table>
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <td>Operador</td>
+                                    <td>Descripción</td>
+                                    <td>Ejemplo</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>and</td>
+                                <td>¿se cumple a y b?</td>
+                                <td>r = True and False # r es False</td>
+                            </tr>
+                            <tr>
+                                <td>or</td>
+                                <td>¿se cumble a o b?</td>
+                                <td>r = True or False # r es True</td>
+                            </tr>
+                            <tr>
+                                <td>not</td>
+                                <td>No a</td>
+                                <td>r = not True # r es False</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Booleanos</h3>
+                    <p>Los valores booleanos son además el resultado de expresiones que utilizan operadores relaciones</p>
+                    <table>
+                        <tbody>
+                            <thread>
+                                <tr>
+                                    <td>Operador</td>
+                                    <td>Descripción</td>
+                                    <td>Ejemplo</td>
+                                </tr>
+                            </thread>
+                            <tr>
+                                <td>==</td>
+                                <td>¿Son iguales a y b?</td>
+                                <td>r = 5==3 # r es False</td>
+                            </tr>
+                            <tr>
+                                <td>!=</td>
+                                <td>¿Son distintos a y b?</td>
+                                <td>r = 5 != 3 # r es True</td>
+                            </tr>
+                            <tr>
+                                <td><</td>
+                                <td>¿es a menor que b?</td>
+                                <td>r = 5 < 3 # r es False</td>
+                            </tr>
+                            <tr>
+                                <td>></td>
+                                <td>¿es a mayor que b?</td>
+                                <td>r = 5 > 3 # r es True</td>
+                            </tr>
+                            <tr>
+                                <td><=</td>
+                                <td>¿es a menor o igual que b?</td>
+                                <td>r = 5 <= 5 # r es True</td>
+                            </tr>
+                            <tr>
+                                <td>>=</td>
+                                <td>¿es a mayor o igual que b?</td>
+                                <td>r = 5 >=3 # r es True</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Colecciones</h3>
+                    <h4>Listas</h4>
+                    <p>La lista es un tipo de coleccion ordenada, lo que en otros lenguajes se conoce por arrays o vectores</p>
+                    <p>Las listas pueden contener cualquier tipo de dato: números, cadenas, booleanos e inclusive listas</p>
+                    <p>Crear una lista es tan sencillo como indicar entre corchetes, y separados por comas, los valores que queremos incluir</p>
+                    <pre class="prettyprint">
+                        l = [22, True, "una lista", [1, 2]]
+                    </pre>
+                    <p>Para acceder a un valor de la lista escribimos el nombre de la lista y el índice del elemento entre corchetes teniendo en cuenta que los indicies inician en 0</p>
+                    <pre class="prettyprint">
+                        mi_var = l[1] # mi_var = True
+                    </pre>
+                </section>
+                <section>
+                    <h4>Listas</h4>
+                    <p>Para acceder a un elemento de una lista incluida dentro de otra lista solo se tendra que usar dos veces el operador, el primero indica la posición de la lista exterior y el segundo para seleccionar el elemento de la lista interior</p>
+                    <pre class="prettyprint">
+                        l = [22, True, "una lista", [1, 2]]
+                        mivar = l[3][1] # mivar = 2
+                    </pre>
+                    <p>Tambien podemos usar este operador para modificar un elemento de la lista si se coloca en la parte izquierda de una asignación</p>
+                    <pre class="prettyprint">
+                        l = [22, True, "una lista", [1, 2]]
+                        l[0] = 99 # l sera [99, True, "unalista", [1, 2]]
+                    </pre>
+                </section>
+                <section>
+                    <h4>listas</h4>
+                    <p>Una curiosidad del operador [] es que se puede utilizar con un valor negativo, lo que hara es comenzar el índice desde el final, es decir [-1] y asi sucesivamente</p>
+                    <p>Otro funcionalidad de este operador es conocida como <i>slicing</i>, consiste en seleccionar porciones de la lista, si en lugar de escribir un numero escribimos dos separados por <strong>:</strong>(inicio:fin) indicamos que queremos una lista que vaya desde la posición de inicio hasta la posición de fin sin incluir este último. Si escribimos tres numeros (inicio:fin:salto), el tercer numero se utiliza para determinar cada cuantas posiciones añadir un elemento a la lista</p>
+                    <pre class="prettyprint">
+                        l = [22, True, "una lista", [1, 2]]
+                        mivar = l[0:2] # mivar es igual a [22, True]
+                        mivar = l[0:4:2] # mivar es igual a [22, "una lista"]</pre>
+                    <span class="nota">Se pueden usar tambien numeros negativos con el comportamiento mencionado anteriormente</span>
+                </section>
+                <section>
+                    <h4>Tuplas</h4>
+                    <p>Todo lo visto para las listas aplica para las tuplas a excepción de la forma de definirla, ya que se utilizan paréntesis en lugar de corchetes</p>
+                    <pre class="prettyprint">
+                        l = (22, True, "una lista",)</pre>
+                    <p>Es necesario tener en cuenta que las tuplas de un solo elemento es necesario añadir una coma para diferenciarlo de un elemento entre parentesis</p>
+                    <pre class="prettyprint">
+                        l = (22, )
+                        type(l) # type tupla
+                        l = (22)
+                        type(l) # type int</pre>
+                    <p>La diferencia entre las tuplas y las listas es que las primeras no tienen mecanismos de modificación, son inmutables, es decir sus valores no se pueden modificar despues de ser creada</p>
+                </section>
+                <section>
+                    <h4>Tuplas</h4>
+                    <p>A cambio de estas limitaciones las tuplas son mas ligeras</p>
+                    <p>Como una buena practica se recomienta poner siempre la coma al final del último elemento de una tupla</p>
+                    <pre class="prettyprint">
+                        l = (22, True, "una lista",)</pre>
+                </section>
+                <section>
+                    <h4>Diccionarios</h4>
+                    <p>Los diccionarios también llamados matrices asociativas, deben su nombre a que son colecciones que relacionan una clave y un valor</p>
+                    <pre class="prettyprint">
+                        d = {"Love Actually": "Richard Curtis",
+                                 "Kill Bill": "Tarantino",
+                                 "Amélie": "Jean-Piere >Jeunet"}</pre>
+                    <p>El primer valor es la clave y el segundo el valor asociado a  este</p>
+                    <p>La principal diferencia entre los diccionarios y las listas o tuplas es que no se accede a los valores por su índice, sino por su clave utilizando nuevamente el operador <strong>[]</strong></p>
+                    <pre class="prettyprint">
+                        d["Love Actually"] #devuelve "Richard Curtis"
+                    </pre>
+                </section>
+                <section>
+                    <h4>Diccionarios</h4>
+                    <p>Al igual que en las listas se puede utilizar este operador para reasignar valores</p>
+                    <pre class="prettyprint">
+                        d["Kill Bill"] = "Quentin Tarantino"
+                    </pre>
+                    <p>En los diccionarios no se puede utilizar <i>slicing</i> debido a que los diccionarios no son secuencias si no <i>mappings</i></p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Control de flujo</h3>
+                    <h4>Sentencias condicionales</h4>
+                    <p>Si un programa no fuera más que una lista de instrucciones que se ejecutan de forma secuencial no tendría mucha utilidad. Los condicionales nos permiten comprobar condiciones y hacer que nuestro programa se conforme de una y otra forma dependiendo de esta condicion.</p>
+                    <p>Aquí es donde se hacen importante el tipo de dato Booleano y los operadores relacionales.</p>
+                </section>
+                <section>
+                    <h4>if</h4>
+                    <p>Es la forma más simple de un condicional, su sintaxis es un if seguido de la condición a evaluar, dos puntos (:) y en la siguiente linea e indentando el codigo que se ejecuta si se cumple esa condicion</p>
+                    <pre class="prettyprint">
+                        fav = "github.com"
+                        if fav == "github.com":
+                            print "Usas el mejor sistema de versiones"
+                    </pre>
+                </section>
+                <section>
+                    <h4>if..else</h4>
+                    <p>Este es un condicional un poco más complicado, basicamente evalua si se se cumple la condición ejecuta un codigo y si no ejecuta otro.</p>
+        <pre class="prettyprint">
+            fav = "github.com"
+            if fav == "github.com":
+                print "Usas el mejor sistema de versiones"
+            else:
+                print "No usas ningun sistema de versiones, que lastima"
+        </pre>
+                </section>
+                <section>
+                    <h4>if... elif... else</h4>
+                    <p>En python no existe la construccion switch para eso se usa la construccion elif que es la contracción de else if, lo que hace es evaluar la condicion si no se cumple pasa al else if que es otra condicion y si tampoco se cumple y pasa al siguiente, si ninguna se cumple ejecutara el codigo del else</p>
+                    <pre class="prettyprint">
+                        if numero < 0:
+                            print "Negativo"
+                        elif numero > 0:
+                            print "Positivo"
+                        else:
+                            print "Cero"
+                    </pre>
+                </section>
+                <section>
+                    <h4>A if C else B</h4>
+                    <p>Existe adicionalmente una construcción similar al operador <strong>?</strong> de otros lenguajes, no es mas que una forma compacta de un if else.</p>
+                    <p>En esta esta construcción se evalua C, si se cumple devuelve A, en caso contrario devuelve B</p>
+                    <pre class="prettyprint">
+                        var = "par" if (num % 2 == 0) else "impar"
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Control de flujo</h3>
+                    <h4>Bucles</h4>
+                    <p>Los condicionales nos permiten ejecutar diferentes fragmentos de código dependiendo de ciertas condiciones, los bucles permiten ejecutar cierto número de veces un fragmento de código mientras se cumpla una condición</p>
+                </section>
+                <section>
+                    <h4>while</h4>
+                    <p>El bucle while(mientras) ejecuta un fragmento de código mientras se cumpla una condición</p>
+                    <pre class="prettyprint">
+                        edad = 0
+                        while edad < 18:
+                            edad = edad + 1
+                            print "Felicidades, tienes " + str(edad)
+                    </pre>
+                </section>
+                <section>
+                    <h4>for in</h4>
+                    <p>En python for se utiliza como una forma genérica de iterar sobre una secuencia, el siguiente ejemplo muestra el aspecto del bucle for en Python</p>
+                    <pre class="prettyprint">
+                        secuencia = ["uno", "dos", "tres"]
+                        for elemento in secuencia:
+                            print elemento</pre>
+                    <p>Leyendo en lenguaje natural la cabecera del bucle seria, "Para cada elemento en secuencia" <p>
+                    <p>¿qué ocurre si quisiéramos utilizar el for para imprimir los numeros del 30 a 50?</p>
+                    <p>Python tiene una funcion llamada <strong>range</strong></p>
+                    <pre class="prettyprint">
+                        for i in range (30, 51):
+                            print i</pre>
+                    <p>Esto nos mostrara una lista con los números desde el 30 hasta el 50</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Funciones</h3>
+                    <p>Una función es un fragmento de código con un nombre asociado que realiza una serie de tareas y retorna un valor. A los fragmentos de código que no devuelven valores se les llama procedimientos.</p>
+                    <p>En Pyhon no existen los procedimientos, ya que cuando no se especifica un valor de retorno la función devuelve el valor <i>None</i> (nada)</p>
+                    <p>Además de ayudarnos a programar y depurar dividiendo el programa en partes, las funciones también permiten reutilizar código</p>
+                </section>
+                <section>
+                    <h3>Definición de una función</h3>
+                    <p>En Python la funcion se declara con la palabra clave <strong>def</strong> seguida del nombre de la función y entre paréntesis los argumentos separados por comas. A continuación, en otra línea, indentado y despues de los dos puntos se tienen las líneas de código que conforman la función</p>
+                    <pre class="prettyprint">
+                        def mi_funcion(par1, par2):
+                            print par1
+                            print par2</pre>
+                    <p>Tambien se puede encontrar una cadena de texto como primera linea del cuerpo de la funcion, estas cadenas se conocen como <i>docstring</i> y funcionan a modo de documentación de la función</p>
+    <pre class="prettyprint">
+        def mi_funcion(par1, par2):
+            """Esta funcion imprime los valores pasados como parametros"""
+            print par1
+            print par2</pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Orientación a objetos</h3>
+                    <h4>Clases y Objetos</h4>
+                    <p>Un objeto es una entidad que agrupa un estado y una funcionalidad relacionadas. El estado del objeto se define por medio de variables llamadas <strong>atributos</strong>, mientras que la funcionalidad se modela a través de funciones que se conocen como <strong>métodos</strong></p>
+                    <p>Una clase, por otro lado, no es mas que una plantilla genérica a partir de la cuál instanciar los objetos.</p>
+                </section>
+                <section>
+                    <h4>Clases</h4>
+                    <p>En Python las clases se definen mediante la palabra clave <strong>class</strong> seguida del nombre de la clase y dos puntos (:), a continuación indentando el cuerpo de la clase</p>
+        <pre class="prettyprint">
+            class Coche:
+                """Abstracción de los objetos coche."""
+                def __init__(self, gasolina):
+                    self.gasolina = gasolina
+                    print "Tenemos", gasolina,  "litros"
+
+                def arrancar(self):
+                    if self.gasolina > 0:
+                        print "Arranca"
+                    else:
+                        print "No arranca"
+
+                def conducir(self):
+                    if self.gasolina > 0:
+                        self.gasolina -= 1
+                        print "Quedan", self.gasolina,  "litros"
+                    else:
+                        print "No se mueve"</pre>
+                </section>
+                <section>
+                    <p>Lo primero que podemos ver es el método __initi__, este nombre es una convención y se ejecuta justo después de crear un nuevo objeto a partir de la clase, proceso que se conoce como <strong>instanciación</strong>. El método __initi__ como su nombre lo indica, sirve para realizar cualquier proceso de inicialización que se nacesario</p>
+                    <p>El primer parametro de __init__ y del resto de métodos es <strong>self</strong> y sirve para referirse al objeto actual.</p>
+                    <p>Con el ejemplo anterior para crear un objeto se escribría el nombre de la clase seguido de  cualquier parámetro que sea necesario entre paréntesis.</p>
+                    <pre class="prettyprint">
+                        mi coche = Coche(3)</pre>
+                </section>
+                <section>
+                    <h4>Herencia</h4>
+                    <p>En in lenguaje orientado a objetos cuando una clase herada de otra clase estamos haciendo que la subclase contenga todos los atributos y métodos del la super clase</p>
+                    <br>
+                    <h4>Herencia multiple</h4>
+                    <p>En python, a diferencia de otros lenguajes se permite la herencia multiple</p>
+                </section>
+                <section>
+                    <h4>Polimorfismo</h4>
+                    <p>Python, al ser de tipado dinámico, no impone restricciones a los tipos que se le pueden pasar a una función. Por este motivo, a diferencia de Java o C++, el polimorfismo en Python no es de gran importancia</p>
+                    <br>
+                    <h4>Encapsulación</h4>
+                    <p>En Python no existen modificadores de acceso, lo que se hace es el acceso a una variable o función viene determinado por su nombre, si comienza con dos giones bajos y no termina con dos guiones bajos se trata de una variable o función privada.</p>
+                    <p>Los métodos que inician y terminan con dos guiones bajos son métodos especiales de Python que llama automáticamente bajo ciertas circunstancias.</p>
+                </section>
+            </section>
+            <section>
+                <h4>Decoradores</h4>
+                <p>Un decorador no es mas que una función que recibe una función como parámetro y devuelve otra función como resultado</p>
+                <br>
+                <h4>Funciones lambda</h4>
+                <p>El operador <strong>lambda</strong> sirve para crear funciones anónimas en línea, por ser anónimas estas no podrán ser referenciadas más tarde</p>
+                <pre class="prettyprint">
+                    l = [1, 2, 3]
+                    l2 = filter(lambda n: n % 2.0 == 0, l)
+                </pre>
+                <span class="nota">La funcion <i>filter</i> verifica que los elementos de una secuencia cumpla una determinada condición, devolviendo una secuencia con los elementos que cumplen esta condición.</span>
+            </section>
+            <section>
+                <section>
+                    <h2>Django</h2>
+                    <h4>El framework web para perfeccionistas con fechas límite</h4>
+                    <h4>Django hace que sea más fácil construir mejores aplicaciones web más rápido y con menos código</h4>
+                    <a href="https://www.djangoproject.com/">https://www.djangoproject.com/</a>
+                </section>
+                <section>
+                    <h3>Caracteristicas</h3>
+                    <p><strong>ORM</strong>: Defina sus modelos de datos completamente en python, usted tiene una completa API dinamica para acceso a la base de datos.</p>
+                    <p><strong>Interface de Administración automatica</strong>: Ahorrese el trabajo aburrido de crear interfaces para que los clientes agregen y actualicen contenido</p>
+                    <p><strong>Sistema de plantillas</strong>: Use el poderoso, escalable y amigable lenguaje de plantillas para separar el diseño, contenido y codigo Python</p>
+                    <p><strong>Sistema de cache</strong>: Trabajando con memcached u otro framwork de cache, el cache puede ser tan granular como usted quiera</p>
+                    <p><strong>Internacionalización</strong>: Tiene soporte para aplicaciones multilenguaje.</p>
+                </section>
+                <section>
+                    <h3>Instalación</h3>
+                        <p>Instalar django es tan sencillo como abrir la terminal y escribir</p>
+                        <pre class="prettyprint">
+                            pip install django</pre>
+                        <p>para verificar si django esta instalado correctamente en la terminal escribimos</p>
+                        <pre class="prettyprint">
+                            python</pre>
+                        <pre class="prettyprint">
+                            import django
+                            django.VERSION
+                            # (1, 5, 1, 'final', 0)</pre>
+                </section>
+                <section>
+                    <h3>Crear un proyecto</h3>
+                    <p>Para crear un proyecto de django es tan sencillo como desde la consola navegar hasta el directorio donde vamos a trabajar nuestro proyecto, posteriormente escribir en la consola</p>
+                    <pre class="prettyprint">
+                        django-admin.py startproject miproyecto</pre>
+                    <p>esto nos crea una estructura de directorios así</p>
+                    <pre class="prettyprint">
+                        miproyecto/
+                            managa.py
+                            miproyecto/
+                                __init__.py
+                                settings.py
+                                urls.py
+                                wsgi.py</pre>
+                </section>
+            </section>
+
+            
+
+        </div>
+        <div class="state-background"></div>
+    </div>
+	
+    <script src="js/head.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            history: false,
+            rollinglinks: true,
+            transition: 'default',
+            transitionSpeed: 'default',
+            minScale: 0.2,
+            maxScale: 1.2,
+            theme: 'sky',
+            dependencies: [
+                { src: 'js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+</body>
+</html> 

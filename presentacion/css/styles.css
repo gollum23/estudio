@@ -1,0 +1,26 @@
+/**************** SELECTORES **************************/
+body {
+    font-family: 'Nunito', sans-serif
+}
+
+/************************ ID ******************************/
+
+
+/******************** CLASES **************************/
+.filosofia {
+    font-size: 16px !important;
+}
+.logo {
+    display: inline-block;
+    width: 300px;
+}
+.nota {
+    font-size: 0.6em !important;
+    line-height: 0.8em !important;
+}
+.reveal section img {
+    border: 0 !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
+}
