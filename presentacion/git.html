@@ -124,6 +124,54 @@
                     <pre class="prettyprint">$ git checkout -- nombre de archivo</pre>
                 </section>
             </section>
+            <section>
+                <section>
+                    <h2>Trabajando con repositorios remotos</h2>
+                    <div class="logo">
+                        <img src="images/github-logo.svg" width="300">
+                    </div>
+                    <div class="logo">
+                        <img src="images/bitbucket-logo.svg" width="300">
+                    </div>
+                </section>
+                <section>
+                    <h4>Comandos básicos</h4>
+                    <p>Mostrar repositorios remotos</p>
+                    <pre class="prettyprint">
+                    $ git remote
+                    o
+                    $git remote -v</pre>
+                    <span class="nota">'-v' muestra la URL asociada a cada repositorio</span>
+                    <br>
+                    <p>Añadir repositorios remotos</p>
+                    <pre class="prettyprint">
+                    $ git remote add [nombre] [url]</pre>
+                    <span class="nota">ejemplo: git remote add origin git@github.com:gollum23/estudio.git</span>
+                    <br>
+                    <p>Renombrando repositorios remotos</p>
+                    <pre class="prettyprint">
+                    $ git remote rename [nombre-actual] [nombre-nuevo]</pre>
+                    <span class="nota">ejemplo: git remote rename origin gollum23</span>
+                </section>
+                <section>
+                    <p>Recibir los datos del repositorio remoto</p>
+                    <pre class="prettyprint">
+                    $ git fetch [remote-name]</pre>
+                    <span class="nota">ejemplo: git fetch origin</span>
+                    <pre class="prettyprint">
+                    $ git pull [remote-name]</pre>
+                    <span class="nota">La diferencia entre fetch y pull, es que la segunda recupera y une automaticamente el codigo en la primera tienes que hacer la union de los cambios manualmente.</span>
+                    <p>Enviar a repositorios remotos</p>
+                    <pre class="prettyprint">$ git push [remote-name] [branch-name]</pre>
+                    <span class="nota">ejemplo: git push origin master</span>
+                </section>
+                <section>
+                    <p>Crear etiquetas (tag)</p>
+                    <span class="nota">Las etiquetas pueden ser ligeras o anotadas, la diferencia radica en la información que se almacena con la etiqueta siendo la anotada la más completa</span>
+                    <pre class="prettyprint">
+                    $ git tag -a [tag] -m "comentario"</pre>
+                </section>
+            </section>
             
 
             
