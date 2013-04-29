@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git, Github y Bitbucket</title>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/defaul.css" id="theme">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/desert.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="prettyPrint()">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Git, Github y Bitbucket</h1>
+                <p>Sistema de control de versiones</p>
+                <p>y repositorios online para compartir código</p>
+                <div class="logo">
+                    <img src="images/git-logo.svg" width="300">    
+                </div>
+                <div class="logo">
+                    <img src="images/github-logo.svg" width="300">
+                </div>
+                <div class="logo">
+                    <img src="images/bitbucket-logo.svg" width="300">
+                </div>
+            </section>
+            <section>
+                <section>
+                    <h2>¿Qué es un control de versiones?</h2>
+                    <p>Es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, para poder recuperar versiones específicas posteriormente.</p>
+                    <p>El sistema de control de versiones sirve para casi cualquier tipo de archivo que se encuentre en un computador.</p>
+                </section>
+                <section>
+                    <h2>Sistema de control de versiones locales</h2>
+                    <p>El método de control de versiones de muchas personas es copiar el archivo a otra carpeta probablemente indicando la fecha de modificación del archivo, aunque este sistema es muy sencillo, tambien es suceptible a errores.</p>
+                    <p>Para hacer frente a este problema, los programadores desarrollaron VCS(Version Control System) locales que contienen una base de datos en la que se registran los cambios registrados en los diferentes archivos.</p>
+                </section>
+                <section>
+                    <h2>Sistema de control de versiones centralizados</h2>
+                    <p>El siguiente gran problema es la gente que necesita colaborar con otras personas en un documento, para solventar este problema, se desarrollaron los sistemas de control de versiones centralizados (CVCS), dentro de estos sistemas encontramos el conocido Subversión y Perforce</p>
+                    <p>Esta configuración presenta una gran desventaja, si el servidor centralizado presenta una falla durante una hora, entonces en ese lapso de tiempo nadie podra colaborar o guardar cambios en versionados.</p>
+                </section>
+                <section>
+                    <h2>Sistema de control de versiones distribuidos</h2>
+                    <p>Aquí es donde entra a participar sistemas como Git, Mercurial, Bazzar. Los clientes no sólo descargan la última versión de los archivos, replican completamente el repositorio. Así, si un servidor muere, y estos sistemas estabn colaborando a través de el, cualquiera de los repositorios de los clientes puede copiarse en el servidor para restaurarlo.</p>
+                    <p>Cada vez que se descarga una instantánea, en realidad se hace una copia de seguridad completa de todos los datos.</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <div class="logo">
+                        <img src="images/git-logo.svg" width="300">    
+                    </div>
+                    <h4>Instalando Git</h4>
+                    <h6>Linux</h6>
+                    <pre class="prettyprint">
+                    $ yum install git-core
+                    $ apt-get install git</pre>
+                    <h6>Mac</h6>
+                    <p>Instalador grafico</p>
+                    <a href="http://code.google.com/p/git-osx-installer">http://code.google.com/p/git-osx-installer</a>
+                    <h6>Windows</h6>
+                    <a href="http://msysgit.github.com/">http://msysgit.github.com/</a>
+                </section>
+                <section>
+                    <h4>Configuración inicial</h4>
+                    <p>Git trae una herramienta de configuración llamada <strong>git config</strong> que permite consultar y establecer las variables de configuración del funcionamiento de git</p>
+                    <h6>Tu identidad</h6>
+                    <p>lo primero que se debe configurar es establecer el nombre de usuario y el correo electronico, es necesario ya que la confirmaciones de cambios usan esta información</p>
+            <pre class="prettyprint">
+                $ git config --global user.name "Diego Forero"
+                $ git config --global user.email "gollum23@gmail.com"</pre>
+                <p>Esto solo es necesario hacerlo una vez</p>
+                <p>Para comprobar tu configuracion</p>
+            <pre class="prettyprint">
+                $ git config --list</pre>
+                </section>
+                <section>
+                    <h4>Acceder a la ayuda</h4>
+                    <p>Git provee una funcion para acceder a la ayuda de los comandos usudos en git y se puede acceder de la siguiente manera</p>
+            <pre class="prettyprint">
+                $ git help -comando-
+                o
+                $ git -comando- --help</pre>
+                    <p>Para acceder a la ayuda general de git solo se digita git en la terminal y mostrara la ayuda.</p>
+                </section>
+                <section>
+                    <h4>Comandos básicos</h4>
+                    <p>Inicializar un repositorio</p>
+                    <pre class="prettyprint">$ git init</pre>
+                    <br>
+                    <p>Clonar un repositorio</p>
+                    <pre class="prettyprint">$ git clone -url-</pre>
+                    <br>
+                    <p>Status del repositorio ver cambios preparados y no preparados</p>
+                    <pre class="prettyprint">$ git status</pre>
+                </section>
+                <section>
+                    <h4>Comandos básicos</h4>
+                    <p>Seguimiento a nuevos archivos y preparación de archivos</p>
+                    <pre class="prettyprint">$ git add -nombredearchivo-</pre>
+                    <br>
+                    <p>Confirmar cambios</p>
+                    <pre class="prettyprint">$ git commit -m "Comentario"</pre>
+                    <p>Confirmar cambios sin necesidad de prepararlos archivos</p>
+                    <pre class="prettyprint">$ git commit -a -m "Comentario"</pre>
+                </section>
+
+            </section>
+            
+
+            
+
+        </div>
+        <div class="state-background"></div>
+    </div>
+	
+    <script src="js/head.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            history: false,
+            rollinglinks: true,
+            transition: 'default',
+            transitionSpeed: 'default',
+            minScale: 0.2,
+            maxScale: 1.2,
+            theme: 'sky',
+            dependencies: [
+                { src: 'js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+</body>
+</html> 
