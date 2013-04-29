@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a Python y Django</title>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/desert.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="prettyPrint()">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Django</h1>
+                <p>Programar no solo es divertido, tambien es fácil</p>
+                <p>Introducción django</p>
+                <div class="logo">
+                    <img src="images/django-logo-positive.svg" width="300">
+                </div>
+            </section>
+            <section>
+                <section>
+                    <h2>Django</h2>
+                    <h4>El framework web para perfeccionistas con fechas límite</h4>
+                    <h4>Django hace que sea más fácil construir mejores aplicaciones web más rápido y con menos código</h4>
+                    <a href="https://www.djangoproject.com/">https://www.djangoproject.com/</a>
+                </section>
+                <section>
+                    <h3>Caracteristicas</h3>
+                    <p><strong>ORM</strong>: Defina sus modelos de datos completamente en python, usted tiene una completa API dinamica para acceso a la base de datos.</p>
+                    <p><strong>Interface de Administración automatica</strong>: Ahorrese el trabajo aburrido de crear interfaces para que los clientes agregen y actualicen contenido</p>
+                    <p><strong>Sistema de plantillas</strong>: Use el poderoso, escalable y amigable lenguaje de plantillas para separar el diseño, contenido y codigo Python</p>
+                    <p><strong>Sistema de cache</strong>: Trabajando con memcached u otro framwork de cache, el cache puede ser tan granular como usted quiera</p>
+                    <p><strong>Internacionalización</strong>: Tiene soporte para aplicaciones multilenguaje.</p>
+                </section>
+                <section>
+                    <h3>Instalación</h3>
+                        <p>Instalar django es tan sencillo como abrir la terminal y escribir</p>
+                        <pre class="prettyprint">
+                            pip install django</pre>
+                        <p>para verificar si django esta instalado correctamente en la terminal escribimos</p>
+                        <pre class="prettyprint">
+                            python</pre>
+                        <pre class="prettyprint">
+                            import django
+                            django.VERSION
+                            # (1, 5, 1, 'final', 0)</pre>
+                </section>
+                <section>
+                    <h3>Crear un proyecto</h3>
+                    <p>Para crear un proyecto de django es tan sencillo como desde la consola navegar hasta el directorio donde vamos a trabajar nuestro proyecto, posteriormente escribir en la consola</p>
+                    <pre class="prettyprint">
+                        django-admin.py startproject miproyecto</pre>
+                    <p>esto nos crea una estructura de directorios así</p>
+                    <pre class="prettyprint">
+                        miproyecto/
+                            manage.py
+                            miproyecto/
+                                __init__.py
+                                settings.py
+                                urls.py
+                                wsgi.py</pre>
+                    <p class="nota">El archivo <strong>settings.py</strong> contiene la configuración de nuestro proyecto como datos de conexión a la base de datos, carpetas static y media, aplicaciones instaladas en el proyecto</p>
+                    <p class="nota">El archivo <strong>urls.py</strong> es nuestro enrutador el es el que verifica la url ingresada en el navegador y la redirije a la vista correcta.</p>
+                </section>
+            </section>
+
+        </div>
+        <div class="state-background"></div>
+        <div id="go_home">
+            <a href="index.html">Volver</a>
+        </div>
+    </div>
+	
+    <script src="js/head.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            history: false,
+            rollinglinks: true,
+            transition: 'default',
+            transitionSpeed: 'default',
+            minScale: 0.2,
+            maxScale: 1.2,
+            theme: 'sky',
+            dependencies: [
+                { src: 'js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+</body>
+</html> 

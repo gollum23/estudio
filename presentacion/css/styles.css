@@ -2,9 +2,23 @@
 body {
     font-family: 'Nunito', sans-serif
 }
+ul#indice {
+    list-style: none;
+}
 
 /************************ ID ******************************/
-
+#go_home {
+    font-size: 16px;
+    position: absolute !important;
+    left: 16px;
+    top: 16px;
+}
+#go_home a{
+    color: #333;
+}
+#go_home a:hover {
+    text-decoration: underline;
+}
 
 /******************** CLASES **************************/
 .filosofia {
