@@ -166,15 +166,19 @@
                     <span class="nota">ejemplo: git push origin master</span>
                 </section>
                 <section>
+                    <h4>Etiquetas</h4>
+                    <p>Las etiquetas sirven para referencias puntos especificos como versiones de nuestro codigo.</p>
                     <p>Crear etiquetas (tag)</p>
                     <span class="nota">Las etiquetas pueden ser ligeras o anotadas, la diferencia radica en la información que se almacena con la etiqueta siendo la anotada la más completa</span>
                     <pre class="prettyprint">
                     $ git tag -a [tag] -m "comentario"</pre>
+                    <br>
+                    <p>Enviar etiquetas al servidor remoto</p>
+                    <pre class="prettyprint">
+                    $ git push [remote-name] [tag]</pre>
+                    <span class="nota">el comando "git push" no envia las etiquetas por defecto se tiene que hacer explicito</span>
                 </section>
             </section>
-            
-
-            
 
         </div>
         <div class="state-background"></div>
