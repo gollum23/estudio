@@ -48,6 +48,8 @@
                             django.VERSION
                             # (1, 5, 1, 'final', 0)</pre>
                 </section>
+            </section>
+            <section>
                 <section>
                     <h3>Crear un proyecto</h3>
                     <p>Para crear un proyecto de django es tan sencillo como desde la consola navegar hasta el directorio donde vamos a trabajar nuestro proyecto, posteriormente escribir en la consola</p>
@@ -65,7 +67,48 @@
                     <p class="nota">El archivo <strong>settings.py</strong> contiene la configuración de nuestro proyecto como datos de conexión a la base de datos, carpetas static y media, aplicaciones instaladas en el proyecto</p>
                     <p class="nota">El archivo <strong>urls.py</strong> es nuestro enrutador el es el que verifica la url ingresada en el navegador y la redirije a la vista correcta.</p>
                 </section>
+                <section>
+                    <h3>Crear una aplicación</h3>
+                    <p>Dentro de las filosofias django esta el no escribir código de más, por esto django divide las partes de un proyecto en aplicaciones, con esto se modularizan los proyecto y se reutiliza el codigo de la aplicación en otro proyecto.</p>
+                    <p>Para crear una nueva aplicación digitamos en consola</p>
+                    <pre class="prettyprint">
+                        django-admin.py startapp nombreapp</pre>
+                    <p>Nuestra estructura de archivos ahora se vera así:</p>
+                    <pre class="prettyprint">
+                        miproyecto/
+                            manage.py
+                            miproyecto/
+                                __init__.py
+                                settings.py
+                                urls.py
+                                wsgi.py
+                            nombreapp/
+                                __init__.py
+                                models.py
+                                tests.py
+                                views.py</pre>
+                </section>
+                <section>
+                    <h1>settings.py</h1>
+                </section>
+                <section>
+                    <h1>urls.py</h1>
+                </section>
             </section>
+            <section>
+                <section>
+                    <h3>Nuestra primera aplicación</h3>
+                    <ul>
+                        <li>Crear modelos de datos</li>
+                        <li>Crear las vistas (Controladores en otros frameworks)</li>
+                        <li>Crear los templates (Vistas en otros frameworks)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Conectando todo</h3>
+                </section>
+            </section>
+            
 
         </div>
         <div class="state-background"></div>
